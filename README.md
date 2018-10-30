@@ -4,7 +4,7 @@
   </a>
 </p>
 
-<h1 style="text-align:center; display: inline;">
+<h1 style="display: inline;" align="center">
   Simultra
 </h1>
 
