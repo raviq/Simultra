@@ -5,9 +5,9 @@
 </p>
 
 
-<h2 align="center">
+<h1 align="center">
   Simultra
-</h2>
+</h1>
 
 <p align="center">
 	A multiagent simulator of road traffic
