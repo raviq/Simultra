@@ -35,7 +35,7 @@ Simultra is a multiagent simulator of road traffic.
 ### Features
 
 - Programmable agents that can emulate vehicles, drivers and intelligent traffic signals.
-- Realistic map rendering using [OpenStreetMap](ttps://www.openstreetmap.org).
+- Realistic map rendering using [OpenStreetMap](https://www.openstreetmap.org).
 - Precipitation rendering on top of the traffic simulation layer.
 
 Watch this simulation [video](https://github.com/raviq/Simultra/blob/master/Simultra/resources/video.mp4) from AAMAS 2016. 
