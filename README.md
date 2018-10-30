@@ -45,7 +45,7 @@ Watch this simulation [video](https://github.com/raviq/Simultra/blob/master/Simu
 ### Architecture
 
 <p align="center">
-	<img src="https://github.com/raviq/Simultra/blob/master/docs/arch.png" width="500">
+	<img src="https://github.com/raviq/Simultra/blob/master/docs/arch.png" width="600">
 </p>
 
 <a  name="prereq"></a>
