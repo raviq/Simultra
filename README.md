@@ -16,7 +16,6 @@
 
 [<img alt="Build Status" src="https://travis-ci.org/raviq/Simultra.svg?branch=master">][travis-url] 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![HitCount](http://hits.dwyl.io/raviq/Simultra.svg)](http://hits.dwyl.io/raviq/Simultra)
 </div>
 
 ## Table of Contents
