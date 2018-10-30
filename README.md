@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/raviq/Simultra">
-    <img alt="simultra" src="https://github.com/raviq/Simultra/blob/master/Simultra/docs/ico.png" width="300">
+    <img alt="simultra" src="https://github.com/raviq/Simultra/blob/master/docs/ico.png" width="300">
   </a>
 </p>
 
@@ -40,7 +40,7 @@ Watch this simulation [video](https://github.com/raviq/Simultra/blob/master/Simu
 ### Architecture
 
 <p align="center">
-	<img src="https://github.com/raviq/Simultra/blob/master/Simultra/docs/arch.png" width="600">
+	<img src="https://github.com/raviq/Simultra/blob/master/docs/arch.png" width="600">
 </p>
 
 <a  name="prereq"></a>
@@ -147,7 +147,7 @@ The driver type specifies the velocities of two angles (straight and turn) which
 Now, running the simulator should give something like:
 
 <p align="center">
-	<img src="https://github.com/raviq/Simultra/blob/master/Simultra/docs/GUI1.png" width="600">
+	<img src="https://github.com/raviq/Simultra/blob/master/docs/GUI1.png" width="600">
 </p>
 
 with
@@ -192,13 +192,13 @@ Simultra was used in other project either directly or after some changes on its 
 - As a pipelined distributed architecture ([project](https://github.com/itolab-hayashi-rafik/Simultra))
 
 <p align="center">
-	<img src="https://github.com/raviq/Simultra/blob/master/Simultra/resources/integ.png" width="700">
+	<img src="https://github.com/raviq/Simultra/blob/master/resources/integ.png" width="700">
 </p>
 
 - On [StarBED](http://starbed.nict.go.jp/en/index.html)
 
 <p align="center">
-	<img src="https://github.com/raviq/Simultra/blob/master/Simultra/resources/onstarbed.png" width="500">
+	<img src="https://github.com/raviq/Simultra/blob/master/resources/onstarbed.png" width="500">
 </p>
 
 <a  name="improv"></a>
