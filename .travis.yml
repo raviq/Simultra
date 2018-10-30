@@ -27,7 +27,7 @@ install:
     fi
 
 script:
-  - qmake blinkers.pro
+  - qmake simultra.pro
   - make
 
 notifications:
