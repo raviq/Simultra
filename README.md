@@ -241,10 +241,7 @@ It is distributed WITHOUT WARRANTY; without even the implied warranty of merchan
 See the [GNU General Public License](https://github.com/raviq/Simultra/blob/master/LICENSE) for more details. 
 
 
-
-
-(c) 2015--2018 Rafik Hadfi, rafik.hadfi@gmail.com
-
+(c) 2015-2018 Rafik Hadfi, rafik.hadfi@gmail.com
 
 
 [travis-url]: https://travis-ci.org/raviq/Simultra
