@@ -159,26 +159,19 @@ Now, running the simulator should give something like:
 
 with
 
-1. Play/Pause simulation.
-2. Stop simulation.
-3. Simulation clock.
-4. Shows the OSM view of the simulation.
-5. Shows the physical view of the simulation.
-6. Zoom (OSM Map).
-7. Zoom (Physics engine Map).
-8. Increase/Decrease vehicle size.
-9. Center the map in one particular point (specified in `config.h`).
-10. Pedestrian mode.
-11. Moving the map.
-12. Adding precipitations.
-13. About Simultra.
-14. Simulation area.
-15. Order of the layers and rendering opacity.
-16. Simulation components.
-17. Vehicle's forces. Works in physical view.
-18. Flow parameters.
-19. Traces, mobility data, etc.
-20. Main view window.
+|         |            |   
+| ------------- |-------------|
+|1. Play/Pause simulation. |11. Moving the map. |
+|2. Stop simulation. |12. Adding precipitations. |
+|3. Simulation clock. |13. About Simultra. |
+|4. Shows the OSM view of the simulation. | 14. Simulation area. |
+|5. Shows the physical view of the simulation. | 15. Order of the layers and rendering opacity. |
+|6. Zoom (OSM Map). | 16. Simulation components. |
+|7. Zoom (Physics engine Map). | 17. Vehicle's forces. Works in physical view. |
+|8. Increase/Decrease vehicle size. | 18. Flow parameters. |
+|9. Center the map in one particular point (specified in `config.h`). | 19. Traces, mobility data, etc. |
+|10. Pedestrian mode. | 20. Main view window. |
+
 
 ### What you can do
 - Zoom in/out, either with the mouse or button 6.
