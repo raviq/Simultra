@@ -4,9 +4,21 @@
   </a>
 </p>
 
-<h2 align="center">
+<style>
+h1 { 
+    display: block;
+    font-size: 0.9em;
+    margin-top: -1.91em;
+    margin-bottom: -1.91em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+</style>
+
+<h1 style="text-align:center" align="center">
   Simultra
-</h2>
+</h1>
 
 <p align="center">
 	A multiagent simulator of road traffic
