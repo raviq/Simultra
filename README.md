@@ -4,7 +4,6 @@
   </a>
 </p>
 
-
 <h1 align="center">
   Simultra
 </h1>
