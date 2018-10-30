@@ -1,0 +1,49 @@
+# $Id: makefile.vc 2012/05/05 Sandro Furieri $
+#
+# NMAKE Makefile to build libreadosm on Windows
+#
+!INCLUDE nmake.opt
+
+LIBOBJ	               =	src\readosm.obj src\osmxml.obj \
+							src\protobuf.obj src\osm_objects.obj
+READOSM_DLL	 	       =	readosm$(VERSION).dll
+
+CFLAGS	=	/nologo -IC:\OSGeo4W\include -Iheaders $(OPTFLAGS)
+
+default:	all
+
+all: readosm.lib readosm_i.lib
+
+readosm.lib:	$(LIBOBJ)
+	if exist readosm.lib del readosm.lib
+	lib /out:readosm.lib $(LIBOBJ)
+
+$(READOSM_DLL):	readosm_i.lib
+
+readosm_i.lib:	$(LIBOBJ)
+	link /debug /dll /out:$(READOSM_DLL) \
+		/implib:readosm_i.lib $(LIBOBJ) \
+		C:\OSGeo4w\lib\libexpat.lib C:\OSGeo4w\lib\zlib.lib
+	if exist $(FREEXL_DLL).manifest mt -manifest \
+		$(FREEXL_DLL).manifest -outputresource:$(FREEXL_DLL);2 
+		
+.c.obj:
+	$(CC) $(CFLAGS) /c $*.c /Fo$@
+	
+clean:
+	del *.dll
+	del *.exp
+	del *.manifest
+	del *.lib
+	del *.obj
+	del *.pdb
+
+install: all
+	-mkdir $(INSTDIR)
+	-mkdir $(INSTDIR)\bin
+	-mkdir $(INSTDIR)\lib
+	-mkdir $(INSTDIR)\include
+	copy *.dll $(INSTDIR)\bin
+	copy *.lib $(INSTDIR)\lib
+	copy headers\readosm.h $(INSTDIR)\include	
+

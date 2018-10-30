@@ -7,7 +7,6 @@
 #include <iostream>
 #include <QWidget>
 #include <QMessageBox>
-#include <QtTest>
 #include <QDesktopWidget>
 #include <iostream>
 #include "ui_aboutdialog.h"

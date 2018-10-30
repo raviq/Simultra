@@ -1,0 +1,12 @@
+# Package Information for pkg-config
+
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: readosm
+Description: a simple library parsing Open Street Map files
+Version: @VERSION@
+Libs: -L${libdir} -lreadosm -lz -lexpat
+Cflags: -I${includedir} 

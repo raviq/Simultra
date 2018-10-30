@@ -1,0 +1,104 @@
+/** \example test_osm1.c
+
+test_osm1.c is a simple demonstration tool for OSM file formats.
+
+This sample code provides an example of:
+ - opening the OSM file
+ - parsing the OSM file, then printing an XML-like notation on the standard output. 
+ - closing the OSM file when no further operations are required
+ 
+Here is an example of a typical run:
+\verbatim
+./test_osm1 italy.osm >italy-from-xml
+or
+./test_osm1 italy.osm.pbf >italy-from-pbf
+\endverbatim
+
+Please note: the output produced by test_osm1 is usually verbose,
+so redirecting the standard output to a disk file is strongly recommended.
+*/
+
+/** \example test_osm2.c
+
+test_osm2.c is another simple demonstration tool for OSM file formats.
+
+This sample code provides an example of:
+ - opening the OSM file
+ - parsing the OSM file, thus collecting and printing simple statistics about NODEs, WAYs and RELATIONs
+ - error handling
+ - closing the OSM file when no further operations are required
+
+Here is a typical usage example, parsing an OSM XML file (.osm):
+\verbatim
+./test_osm2 test.osm
+Longitude    range: 8.7889611 / 9.4145124
+Latitude     range: 41.3870658 / 42.8070090
+
+Nodes             : 1060
+              tags: 1052
+
+Ways              : 112
+             ndref: 785
+              tags: 241
+
+Relations         : 13
+  member.nodes    : 16
+  member.ways     : 44
+  member.relations: 6
+              tags: 199
+\endverbatim
+
+Here is another example, this time parsing a .pbf (Protocol Buffer) OSM file:
+\verbatim
+./test_osm2 test.osm
+Longitude    range: 8.5856726 / 10.2898441
+Latitude     range: 41.3332843 / 43.5406952
+
+Nodes             : 8000
+              tags: 3162
+
+Ways              : 12336
+             ndref: 221627
+              tags: 24904
+
+Relations         : 1520
+  member.nodes    : 2952
+  member.ways     : 2741
+  member.relations: 30
+              tags: 10081
+\endverbatim
+
+*/
+
+/** \example test_osm3.c
+
+test_osm3.c shows how to intentionally abort the parser.
+
+Here is a typical usage example, parsing an OSM XML file (.osm):
+\verbatim
+./test_osm3 test.osm 10
+node#1
+node#2
+node#3
+node#4
+node#5
+node#6
+node#7
+node#8
+node#9
+node#10
+PARSING ABORTED
+\endverbatim
+
+Here is another example, this time parsing a .pbf (Protocol Buffer) OSM file:
+\verbatim
+./test_osm3 test.osm 5
+node#1
+node#2
+node#3
+node#4
+node#5
+PARSING ABORTED
+\endverbatim
+
+*/

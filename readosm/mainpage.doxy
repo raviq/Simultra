@@ -1,0 +1,255 @@
+/** \mainpage notitle
+
+\section Introduction
+
+ReadOSM is a C open source library to extract valid data from within an Open
+Street Map input file. Such OSM files come in two different formats:
+ - files identified by the <b>.osm</b> suffix simply are plain XML files.
+ - files identified by the <b>.pbf</b> suffix contain the same 
+    data, but adopting the Google's Protocol Buffer serialization format (a
+   more concise and compressed binary notation, thus requiring much less
+   storage space).
+
+The ReadOSM design goals are:
+ - to be simple and lightweight
+ - to be stable, robust and efficient
+ - to be easily and universally portable.
+ - making the whole parsing process of both .osm or .pbf files 
+   completely transparent from the application own perspective.
+
+ReadOSM is structurally simple and quite light-weight (typically about 20K of object
+code, stripped). ReadOSM has only two key dependencies:
+ - zlib (the well known ZIP library), which is used to decompress zipped binary
+   blocks internally stored within .pbf files.
+ - expat (a widely used XML parsing library), which is used to parse XML .osm files.
+ - both libraries are widely available on many platforms.
+
+Building and installing ReadOSM is straightforward:
+\verbatim
+./configure
+make
+make install
+\endverbatim
+
+Linking ReadOSM to your own code is usually simple:
+\verbatim
+gcc my_program.c -o my_program -lreadosm
+\endverbatim
+
+On some systems you may have to provide a slightly more complex arrangement:
+\verbatim
+gcc -I/usr/local/include my_program.c -o my_program \
+  -L/usr/local/lib -lreadosm -lexpat -lz
+\endverbatim
+
+ReadOSM also provides pkg-config support, so you can also do:
+\verbatim
+gcc `pkg-config --cflags readosm` my_program.c -o my_program `pkg-config --libs readosm`
+\endverbatim
+
+I originally developed ReadOSM simply in order to allow the SpatiaLite's
+own CLI tools to acquire both OSM .osm and .pbf files indifferently.
+Anyway I feel that supporting OSM files import/parsing in a simple and easy
+way could be useful to many other developers, so I quickly decided to
+implement all this stuff as a self-standing library. 
+
+ReadOSM is licensed under the MPL tri-license terms: you are free to choose the
+best-fit license between:
+ - the MPL 1.1 
+ - the GPL v2.0 or any subsequent version
+ - the LGPL v2.1  or any subsequent version
+
+Enjoy, and happy coding
+*/
+
+/** \page intro About Open Street Map datasets
+
+Open Street Map aka \b OSM [http://www.openstreetmap.org/] is a very popular 
+community project aimed to produced a map of the world; this map is absolutely
+free and is released under the ODbL license terms 
+[http://opendatacommons.org/licenses/odbl/].
+
+Selected portions [by Country / Region] of the OSM map are available on the
+following download sites:
+- http://download.geofabrik.de/
+- http://downloads.cloudmade.com/
+
+The best known format used to ship OSM datasets is based on XML; we'll
+shortly examine the XML general layout so to explain the objects used
+by the OSM data model and their mutual relationships.
+
+\section Node
+
+A Node simply corresponds to a 2D POINT Geometry; the geographic coordinates
+are always expressed as Longitude and Latitude (corresponding to SRID 4326).<br>
+A Node doesn't simply have a geometry; it's usually characterized by several data
+attributes:
+- \b id: a number uniquely identifying each Node object.
+- \b lon and \b lat: the geographic Longitude and Latitude of the Point.
+- \b version: a progressive number identifying subsequent versions of the same object.
+- \b changeset: a progressive number identifying a "changeset", i.e. a batch insert/update
+performed by same user.
+- \b user: nickname of the user committing the changeset.
+- \b uid: a number uniquely identifying the user
+- \b timestemp: commit date-time
+- \b tag-list: any object may eventually be further qualified using arbitrary \b key:value pairs.
+
+The following is the XML general layout used to represent a Node object:
+\verbatim
+<node id="12345" lat="6.66666" lon="7.77777" version="1" changeset="54321" user="some-user" uid="66" timestamp="2005-02-28T17:45:15Z">
+	<tag key="created_by" value="JOSM" />
+	<tag key="tourism" value="camp_site" />
+</node>
+\endverbatim
+
+\section Way
+
+A Way corresponds to a 2D LINESTRING Geometry: anyway the vertices never are directly
+defined within the Way itself; a list of indirectly referenced Nodes (<b>&lt;nd ref&gt;</b> items) is required instead.<br>
+The data attributes characterizing a Way are more or less the same used for Nodes, and with identical meaning;
+and for Ways too an arbitrary collection of Tags (\b key:value pairs) is supported.
+
+The following is the XML general layout used to represent a Way object:
+\verbatim
+<way id="12345" version="1" changeset="54321" user="some-user" uid="66" timestamp="2005-02-28T17:45:15Z">
+	<nd ref="12345" />
+	<nd ref="12346" />
+	<nd ref="12347" />
+	<tag key="created_by" value="JOSM" />
+	<tag key="tourism" value="camp_site" />
+</way>
+\endverbatim
+
+\section Relation
+
+A Relation is a complex object: it can correspond to a 2D POLYGON, or to a 2D MULTILINESTRING, or even to a 2D GEOMETRYCOLLECTION.<br>
+A Relation object can reference any other kind of OSM objects: each <b>&lt;member&gt;</b> item can address a Node object, 
+a Way object or another Relation object; the \b type attribute will always specify the nature of the referenced object,
+and the optional \b role attribute may eventually better specify the intended scope.<br>
+The data attributes characterizing a Relation are exactly the same used for Ways, and with identical meaning;
+and for Relations too an arbitrary collection of Tags (\b key:value pairs) is supported.
+
+The following is the XML general layout used to represent a Relation object:
+\verbatim
+<relation id="12345" version="1" changeset="54321" user="some-user" uid="66" timestamp="2005-02-28T17:45:15Z">
+	<member type="way" ref="12345" role="outer" />
+	<member type="way" ref="12346" role="inner" />
+	<tag key="created_by" value="JOSM" />
+	<tag key="tourism" value="camp_site" />
+</relation>
+\endverbatim
+*/
+
+/** \page formats Open Street Map file formats
+
+There are two distinct formats used to ship OSM datasets: both contains the exact same
+information, but the internal layout is radically different.
+
+\section osm XML (.osm) files
+
+OSM files based on the XML notation are widely used: usually they are identified by the <b>.osm</b> suffix.<br>
+XML is notoriously verbose and usually requires lots of storage space; happily enough, XML it's strongly compressible.<br>
+Accordingly to this consideration, the most commonly found OSM files are identified by the <b>.osm.bz2</b> suffix:
+this practically means that the <b>.osm</b> (XML) file has been compressed using <b>bzip2</b>.
+In order to actually process a <b>.osm.bz2</b> OSM file a two-steps approach is always required:
+- decompressing the file (using <b>bunzip2</b> or some other tool)
+- then parsing the resulting <b>.osm</b> file
+- please note: the inflated file will require about 10/15 times the amount space required
+  by the compressed file; many OSM XML files could actually be impressively huge (several GB).
+
+\section pbf Protocol Buffer (.pbf) files
+
+An alternative OSM file format is based on the Google's Protocol Buffer encoding 
+[https://developers.google.com/protocol-buffers/docs/encoding]<br>
+This OSM format is based on a public and documented specification: [http://wiki.openstreetmap.org/wiki/PBF_Format]<br>
+
+OSM files based on Protocol Buffer encoding are usually identified by the <b>.pbf</b> suffix.<br>
+The main benefit coming from using <b>.pbf</b> files is in that they are much more compact
+(smaller size) than the corresponding <b>.osm.bz2</b>; and they can be immediately parsed, no
+preliminary decompression step being required at all.<br>
+
+\section readosm Why using ReadOSM ?
+
+The intended scope of <b>ReadOSM</b> is to allow transparent parsing of both OSM formats indifferently.
+There is no need to take care of any internal low-level aspect, because the library itself silently handles any required step.
+The simple and easy abstract interface implemented by ReadOSM is exactly intended so to allow many
+reader-apps to consume OSM-input files in the most painless way; and all this requires only a
+very limited memory footprint.
+
+*/
+
+/** \page readosm ReadOSM basic architecture
+
+ReadOSM implements a very simple and straightforward interface; there are only three methods:
+- <b>readosm_open()</b>: this function is intended to establish a connection to some OSM input file.
+- <b>readosm_close()</b>: this function is intended to terminate a previously established connection.
+- <b>readosm_parse()</b>: a single function dispatching the whole parsing process (mainly based on <b>callback functions</b>).
+
+Accordingly to the above premises, implementing a complete OSM parser is incredibly simple:
+
+\verbatim
+#include <readosm.h>
+
+static int 
+parse_node (const void *user_data, const readosm_node * node)
+{
+/* callback function consuming Node objects */
+  struct some_user_defined_struct *my_struct =
+    (struct some_user_defined_struct *) user_data;
+
+  ... some smart code ...
+
+  return READOSM_OK;
+}
+
+static int 
+parse_way (const void *user_data, const readosm_way * way)
+{
+/* callback function consuming Way objects */
+  struct some_user_defined_struct *my_struct =
+    (struct some_user_defined_struct *) user_data;
+
+  ... some smart code ...
+
+  return READOSM_OK;
+}
+
+static int 
+parse_relation (const void *user_data, const readosm_relation * relation)
+{
+/* callback function consuming Relation objects */
+  struct some_user_defined_struct *my_struct =
+    (struct some_user_defined_struct *) user_data;
+
+  ... some smart code ...
+
+  return READOSM_OK;
+}
+
+int main ()
+{
+/* the basic OSM parser implementation */
+  int ret;
+  const void *handle;
+  struct some_user_defined_struct my_struct;
+
+  ret = readosm_open ("path-to-some-OSM-file", &handle);
+
+  ... error handling intentionally suppressed ...
+
+  ret = readosm_parse (handle, &my_struct, parse_node, parse_way, parse_relation);
+
+  ... error handling intentionally suppressed ...
+
+  ret = readosm_close (handle);
+
+  ... error handling intentionally suppressed ...
+
+  return 0;
+}
+\endverbatim
+
+So the real programming work is simply the one required in order to implement the callback-functions own code.<br>
+You can usefully read and study the <b>Examples</b> code-samples in order to get any other relevant information about this topic.
+
+*/

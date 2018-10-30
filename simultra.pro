@@ -4,7 +4,7 @@
 # Rafik Hadfi <rafik.hadfi@gmail.com>
 ############################################################################
 
-QT += core xml testlib widgets gui
+QT += core xml widgets gui
 
 TARGET = simultra
 TEMPLATE = app
@@ -12,8 +12,8 @@ TEMPLATE = app
 INCLUDEPATH += utils gui gui/images kore
 
 # Readosm
-LIBS += -L/usr/local/lib -lreadosm
-INCLUDEPATH += /usr/local/include/
+LIBS += -L$$PWD/readosm/src/.libs -lreadosm
+INCLUDEPATH += $$PWD/readosm/headers/
 
 # MapGraphics
 LIBS += -L$$PWD/MapGraphics/ -lMapGraphics.1.0.0
