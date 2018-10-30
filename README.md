@@ -147,7 +147,7 @@ The driver type specifies the velocities of two angles (straight and turn) which
 Now, running the simulator should give something like:
 
 <p align="center">
-	<img src="https://github.com/raviq/Simultra/blob/master/docs/GUI1.png" width="700">
+	<img src="https://github.com/raviq/Simultra/blob/master/docs/GUI1.png" width="800">
 </p>
 
 with
