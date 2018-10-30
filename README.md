@@ -9,6 +9,7 @@
 <h3 align="center">
   Simultra
 </h3>
+Simultra is a multiagent simulator of road traffic.
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0) [<img alt="Build Status" src="https://travis-ci.org/raviq/Simultra.svg?branch=master">][travis-url]
 
