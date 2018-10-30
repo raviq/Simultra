@@ -147,7 +147,7 @@ The driver type specifies the velocities of two angles (straight and turn) which
 Now, running the simulator should give something like:
 
 <p align="center">
-	<img src="https://github.com/raviq/Simultra/blob/master/docs/GUI1.png" width="800">
+	<img src="https://github.com/raviq/Simultra/blob/master/docs/GUI1.png" width="900">
 </p>
 
 with
@@ -204,12 +204,12 @@ Simultra was used in other project either directly or after some changes on its 
 <a  name="improv"></a>
 ## Improvements
 
-- There are currently too many configuration files. They could be either generated automatically in a pre-simulation phase or integrated in one JSON file (with `config.h`). Another way to avoid heavy the configuration is to assign vehicles to the paths, which will be loaded from the OSM map. The assignments could be parametrised using some vehicle-per-lane distribution. Another option is to drag and drop vehicles on the OSM map.
-- Integrate the traffic light support in OSM maps.
+- There are currently too many configuration files. They can be either generated automatically in a pre-simulation phase or integrated in one JSON file (`config.h` too). Another way to avoid the heavy configuration is to randomly assign vehicles to the existing (OSM) paths. The assignments could be parametrised using some vehicle-per-lane distribution. Another option is to drag and drop vehicles on the OSM map.
+- Integrate traffic lights with OSM maps.
 - The precipitation data could in principle be acquired dynamically using some weather API.
-- Improvements on the (lat,lon) from/to (x,y) conversions.
+- Improvements on the (lat, lon) from/to (x, y) conversions.
 - Combining `readosm` and `json.c`.
-- More testing.
+- More testing..
 
 <a  name="contrib"></a>
 ## Contribution
@@ -235,7 +235,9 @@ If you find bugs or omissions in the code or documentation, please do not hesita
 This software was developed in the hope that it would be of some use to the AI community, 
 and is freely available for redistribution and/or modification under the terms of the GNU General Public Licence.
 It is distributed WITHOUT WARRANTY; without even the implied warranty of merchantability or fitness for a particular purpose.
-See the [GNU General Public License]() for more details. 
+See the [GNU General Public License](https://github.com/raviq/Simultra/blob/master/LICENSE) for more details. 
+
+
 
 
 (c) 2015--2018 Rafik Hadfi, rafik.hadfi@gmail.com
