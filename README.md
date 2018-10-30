@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://github.com/raviq/Simultra">
-    <img alt="simultra" src="https://github.com/raviq/Simultra/blob/master/docs/ico.png" width="300">
+    <img alt="simultra" src="https://github.com/raviq/Simultra/blob/master/docs/ico.png" width="200">
   </a>
 </p>
 
