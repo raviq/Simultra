@@ -4,19 +4,7 @@
   </a>
 </p>
 
-<style>
-h1 { 
-    display: block;
-    font-size: 0.9em;
-    margin-top: -1.91em;
-    margin-bottom: -1.91em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
-}
-</style>
-
-<h1 style="text-align:center" align="center">
+<h1 style="text-align:center; display: inline;" align="center">
   Simultra
 </h1>
 
