@@ -92,6 +92,7 @@ Simultra/
 To build MapGraphics and generate `libMapGraphics` run
 
 ```sh
+cd mapgraphics/
 qmake MapGraphics.pro
 make
 ```
