@@ -226,13 +226,13 @@ If you find bugs or omissions in the code or documentation, please do not hesita
 <a  name="cite"></a>
 ## Citation
 
-> Ito, Takayuki, et al. "An Implementation of Large-Scale Holonic Multi-agent Society Simulator and Agent Behavior Model." Pacific Rim International Conference on Artificial Intelligence. Springer, Cham, 2018.
+> Takayuki Ito, Takanobu Otsuka, Teruyoshi Imaeda, and Rafik Hadfi. "An Implementation of Large-Scale Holonic Multi-agent Society Simulator and Agent Behavior Model." Pacific Rim International Conference on Artificial Intelligence. Springer, Cham, 2018.
 
-> Hadfi, Rafik, Masayuki Hayashi, and Takayuki Ito. "A pipeline multiagent architecture for road traffic simulation." Proceedings of ITS World Congress. 2017.
+> Rafik Hadfi, Masayuki Hayashi, and Takayuki Ito. "A pipeline multiagent architecture for road traffic simulation." Proceedings of ITS World Congress. 2017.
 
-> Hadfi, Rafik, and Takayuki Ito. "Multilayered Multiagent System for Traffic Simulation." Proceedings of the 2016 International Conference on Autonomous Agents & Multiagent Systems. International Foundation for Autonomous Agents and Multiagent Systems, 2016.
+> Rafik Hadfi and Takayuki Ito. "Multilayered Multiagent System for Traffic Simulation." Proceedings of the 2016 International Conference on Autonomous Agents & Multiagent Systems. International Foundation for Autonomous Agents and Multiagent Systems, 2016.
 
-> Hadfi, Rafik, and Takayuki Ito. "Holonic multiagent simulation of complex adaptive systems." International Conference on Practical Applications of Agents and Multi-Agent Systems. Springer, Cham, 2016.
+> Rafik Hadfi and Takayuki Ito. "Holonic multiagent simulation of complex adaptive systems." International Conference on Practical Applications of Agents and Multi-Agent Systems. Springer, Cham, 2016.
 
 <a  name="licens"></a>
 ## License
