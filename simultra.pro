@@ -16,8 +16,8 @@ LIBS += -L$$PWD/readosm/src/.libs -lreadosm
 INCLUDEPATH += $$PWD/readosm/headers/
 
 # MapGraphics
-LIBS += -L$$PWD/MapGraphics/ -lMapGraphics.1.0.0
-INCLUDEPATH += $$PWD/MapGraphics/
+LIBS += -L$$PWD/mapgraphics/ -lMapGraphics.1.0.0
+INCLUDEPATH += $$PWD/mapgraphics/
 
 # Build
 OBJECTS_DIR = $$PWD/build/obj # Intermediate object files directory
