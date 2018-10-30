@@ -1,0 +1,10 @@
+Changelog:
+
+v1.1
+    - Deactivating walkers and detectors.
+
+v1.0
+    - Road traffic simulation in urban areas.
+    - Usage of an online map based on OpenStreetMap.
+    - Driver and vehicle agents based on behavior models.
+    - Simulation of precipitations using radar images.

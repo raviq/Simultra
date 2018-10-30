@@ -1,0 +1,148 @@
+<Configuration>
+
+
+  <VehicleType name="Walker">
+    <Image>:/images/pedestrian2.png</Image>
+    <Mass>1800.0</Mass>
+    <Wheelbase>1</Wheelbase>
+    <MotForce>5000</MotForce>
+  </VehicleType>
+
+  <VehicleType name="Tiny1">
+    <Image>:/images/bluecar.png</Image>
+    <Mass>1800.0</Mass>
+    <Wheelbase>1</Wheelbase>
+    <MotForce>5000</MotForce>
+  </VehicleType>
+
+  <VehicleType name="Tiny2">
+    <Image>:/images/redcar.png</Image>
+    <Mass>1800.0</Mass>
+    <Wheelbase>1</Wheelbase>
+    <MotForce>5000</MotForce>
+  </VehicleType>
+
+  <VehicleType name="Tiny3">
+    <Image>:/images/greencar.png</Image>
+    <Mass>1800.0</Mass>
+    <Wheelbase>1</Wheelbase>
+    <MotForce>5000</MotForce>
+  </VehicleType>
+
+  <VehicleType name="Tiny4">
+    <Image>:/images/yellow.png</Image>
+    <Mass>1800.0</Mass>
+    <Wheelbase>1</Wheelbase>
+    <MotForce>5000</MotForce>
+  </VehicleType>
+
+  <VehicleType name="Tiny5">
+    <Image>:/images/pink.png</Image>
+    <Mass>1800.0</Mass>
+    <Wheelbase>1</Wheelbase>
+    <MotForce>5000</MotForce>
+  </VehicleType>
+
+
+
+
+
+  <VehicleType name="Pp1">
+    <Image>:/images/pedestrian1.png</Image>
+    <Mass>2.0</Mass>
+    <Wheelbase>1</Wheelbase>
+    <MotForce>1</MotForce>
+  </VehicleType>
+
+  <VehicleType name="Pp2">
+    <Image>:/images/pedestrian2.png</Image>
+    <Mass>2.0</Mass>
+    <Wheelbase>1</Wheelbase>
+    <MotForce>3</MotForce>
+  </VehicleType>
+
+
+  <VehicleType name="Xx">
+    <Image>:/images/redcar.png</Image>
+    <Mass>1800.0</Mass>
+    <Wheelbase>2</Wheelbase>
+    <MotForce>5000</MotForce>
+  </VehicleType>
+
+  <VehicleType name="Yy">
+    <Image>:/images/greencar.png</Image>
+    <Mass>1500.0</Mass>
+    <Wheelbase>2</Wheelbase>
+    <MotForce>6000</MotForce>
+  </VehicleType>
+
+  <VehicleType name="Zz">
+    <Image>:/images/redcar.png</Image>
+    <Mass>1200.0</Mass>
+    <Wheelbase>2</Wheelbase>
+    <MotForce>8000</MotForce>
+  </VehicleType>
+
+  <VehicleType name="Lemon">
+    <Image>:/images/yellow.png</Image>
+    <Mass>1800.0</Mass>
+    <Wheelbase>2</Wheelbase>
+    <MotForce>5000</MotForce>
+  </VehicleType>
+
+  <VehicleType name="Light">
+    <Image>:/images/redcar.png</Image>
+    <Mass>1800.0</Mass>
+    <Wheelbase>2</Wheelbase>
+    <MotForce>5000</MotForce>
+  </VehicleType>
+
+
+
+
+  <DriverType name="SlowWalker">
+    <TurnVelocity>3</TurnVelocity>
+    <StraightVelocity>12</StraightVelocity>
+  </DriverType>
+
+  <DriverType name="Slow0">
+    <TurnVelocity>2</TurnVelocity>
+    <StraightVelocity>12</StraightVelocity>
+  </DriverType>
+
+  <DriverType name="Slow1">
+    <TurnVelocity>5</TurnVelocity>
+    <StraightVelocity>10</StraightVelocity>
+  </DriverType>
+
+  <DriverType name="Slow2">
+    <TurnVelocity>2</TurnVelocity>
+    <StraightVelocity>50</StraightVelocity>
+  </DriverType>
+
+  <DriverType name="Human">
+    <TurnVelocity>4</TurnVelocity>
+    <StraightVelocity>4</StraightVelocity>
+  </DriverType>
+
+  <DriverType name="Normal">
+    <TurnVelocity>20</TurnVelocity>
+    <StraightVelocity>50</StraightVelocity>
+  </DriverType>
+
+  <DriverType name="Normal1">
+    <TurnVelocity>10</TurnVelocity>
+    <StraightVelocity>30</StraightVelocity>
+  </DriverType>
+
+  <DriverType name="Nutter">
+    <TurnVelocity>100</TurnVelocity>
+    <StraightVelocity>100</StraightVelocity>
+  </DriverType>
+
+  <DriverType name="Speedy">
+    <TurnVelocity>20</TurnVelocity>
+    <StraightVelocity>100</StraightVelocity>
+  </DriverType>
+
+</Configuration>

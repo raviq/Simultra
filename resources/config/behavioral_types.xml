@@ -1,0 +1,58 @@
+<Configuration>
+
+  <VehicleType name="Twingo">
+    <Image>:/voiturebleue.png</Image>
+    <Mass>1800.0</Mass>
+    <Wheelbase>4</Wheelbase>
+    <MotorForce>5000</MotorForce>
+  </VehicleType>
+  ....
+
+
+
+<!--
+  mrx.h and mrx.cpp
+ 
+  will constain code for methods related to the behavior of the vehicle
+  like some kind of rules, for e.g.:
+  Given vehicle i, and two vehicles i-1 (behind i) and i+1 (ahead of i)
+  and dt = d(i,i+1) the distance between i and i+1 as perceived by i at t, i will behave according to dt
+
+The key idea is that every movement is determined by behavioral rules, which are imposed by social influences,
+rational decisions or actions following a stimulus-reaction process. These rules can be modeled as attractive
+or repulsive forces. In the case of vehicular mobility, the next intersection towards the trip destination
+wields an attractive force on the vehicle, whereas other vehicles or obstacles in general exert a repulsive
+force on it. The result from the composition of these forces determines the acceleration vector which drives
+the car movement. An example of force-composing model is illustrated in Figure V. However, this model is
+especially expensive under the computational point of view, as every movement require the elaboration and
+composition of multiple inter-object forces.
+[1] Mobility Models in Inter-Vehicle Communications Literature, Marco Fiore
+ 
+ -->
+
+  <DriverType name="MrX">
+    <TurnVelocity>15</TurnVelocity>
+    <StraightVelocity>15</StraightVelocity>
+  </DriverType>
+
+ 
+
+</Configuration>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

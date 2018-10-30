@@ -1,0 +1,183 @@
+/*
+ * GUI Stylesheet
+ */
+
+
+QWidget {
+   background-color: #827E7A;
+   color: #151515;
+}
+
+QCheckBox {
+background: transparent;
+}
+
+QLabel {
+background: transparent;
+}
+
+
+QTextBrowser {
+   background-color: transparent ;
+   color: #1d1c1b;
+}
+
+/* Style the tab using the tab sub-control. Note that it reads QTabBar _not_ QTabWidget */
+
+QTabBar::tab
+{
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #E1E1E1,
+                                stop: 0.4 #DDDDDD,
+                                stop: 0.5 #D8D8D8,
+                                stop: 1.0 #64615e);
+    border: 2px solid #827E7A;
+    border-bottom-color: #827E7C; /* same as the pane color */
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    min-width: 8ex;
+    padding: 4px;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #fafafa,
+                                stop: 0.4 #f4f4f4,
+                                stop: 0.5 #e7e7e7,
+                                stop: 1.0 #151515);
+}
+
+QTabBar::tab:selected {
+    border-color: #9B9B9B;
+    border-bottom-color: #C2C7CB; /* same as pane color */
+}
+
+QTabBar::tab:!selected {
+    margin-top: 4px; /* make non-selected tabs look smaller */
+}
+
+
+
+
+
+
+
+/*
+QFrame {
+    border: 1px solid #d79d13;
+}
+*/
+
+/************************************************/
+
+/*
+QPushButton{
+background-color: #323232;
+color:rgb(255,255,255);
+border-width: 2px;
+border-radius: 22px;
+}
+*/
+
+/*
+QPushButton::pressed {
+color:#717171;
+background-color: #C2C7CB;
+}
+*/
+
+/*
+QMainWindow {
+   background-color: #323232;
+   color: #dddddd;
+}
+*/
+
+/*
+QTextEdit {
+   background-color: #717171;
+   color: gray;
+}
+
+QScrollBar:horizontal {
+   height: 20px;
+}
+QScrollBar:vertical {
+   width: 20px;
+}
+
+QTabWidget::pane {
+   border-top: 2px solid #C2C7CB;
+}
+
+.QLabel {
+   color: red;
+}
+
+.QCheckBox {
+   color: white;
+}
+
+.QRadioButton{
+   color:white;
+}
+*/
+
+
+
+/** Sliders **/
+
+QSlider::groove:horizontal {
+border: 1px solid #bbb;
+background: white;
+height: 10px;
+border-radius: 4px;
+}
+
+QSlider::sub-page:horizontal {
+background: qlineargradient(x1: 0, y1: 0,    x2: 0, y2: 1, stop: 0 #66e, stop: 1 #bbf);
+background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1, stop: 0 #bbf, stop: 1 #55f);
+border: 1px solid #777;
+height: 10px;
+border-radius: 4px;
+}
+
+QSlider::add-page:horizontal {
+background: #fff;
+border: 1px solid #777;
+height: 10px;
+border-radius: 4px;
+}
+
+QSlider::handle:horizontal {
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+    stop:0 #eee, stop:1 #ccc);
+border: 1px solid #777;
+width: 13px;
+margin-top: -2px;
+margin-bottom: -2px;
+border-radius: 4px;
+}
+
+QSlider::handle:horizontal:hover {
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+    stop:0 #fff, stop:1 #ddd);
+border: 1px solid #444;
+border-radius: 4px;
+}
+
+QSlider::sub-page:horizontal:disabled {
+background: #bbb;
+border-color: #999;
+}
+
+QSlider::add-page:horizontal:disabled {
+background: #eee;
+border-color: #999;
+}
+
+QSlider::handle:horizontal:disabled {
+background: #eee;
+border: 1px solid #aaa;
+border-radius: 4px;
+}

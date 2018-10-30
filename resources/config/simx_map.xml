@@ -1,0 +1,255 @@
+<Map>
+<Simulation>simx_simulation.xml</Simulation>
+<Topology>
+  <Intersections>
+
+
+<Intersection name="A" x="458.01131168822610107" y="-19.71057500039057331"/>
+<Intersection name="B" x="448.25074025924413945" y="20.06455625013582988"/>
+<Intersection name="C" x="441.82931168826587509" y="47.91108124979172800"/>
+<Intersection name="D" x="437.63787012978798430" y="70.29618124949965363"/>
+<Intersection name="E" x="436.33023376580291597" y="98.61468124988051898"/>
+<Intersection name="F" x="430.64435064884042959" y="129.65265625010405870"/>
+<Intersection name="G" x="425.84579220761696661" y="159.88715000012001610"/>
+<Intersection name="H" x="424.38637662356774172" y="179.62581875043966306"/>
+<Intersection name="I" x="423.95438961050996340" y="206.27554999928386792"/>
+<Intersection name="J" x="424.99349350631320021" y="234.80756249976457184"/>
+<Intersection name="K" x="425.23867532487150811" y="241.60063125050322697"/>
+<Intersection name="L" x="425.48385714260018631" y="253.96749999930929675"/>
+<Intersection name="M" x="433.82003896113860719" y="313.37454375010543117"/>
+<Intersection name="N" x="442.29632467492939440" y="377.63618750014563830"/>
+<Intersection name="O" x="452.39548051930455586" y="443.26318750057203033"/>
+<Intersection name="P" x="462.64641558457361725" y="509.94651250056779190"/>
+<Intersection name="Q" x="470.71406493493009293" y="576.93325000011702741"/>
+<Intersection name="R" x="480.03097402604248600" y="644.03236250097950233"/>
+<Intersection name="S" x="488.78746753199732211" y="708.99073124958033532"/>
+<Intersection name="T" x="497.89422077898677799" y="769.97102499959930810"/>
+<Intersection name="U" x="499.72724675286457341" y="779.75888749980504144"/>
+<Intersection name="V" x="508.26190909071419810" y="849.62804375070197693"/>
+<Intersection name="W" x="514.80009090898045088" y="873.37288125112968373"/>
+
+<Intersection name="X" x="561.86332467518820977" y="572.11798125013490335"/>
+<Intersection name="Y" x="671.08598701251355578" y="567.02739375052840387"/>
+<Intersection name="Z" x="781.00916883107845479" y="561.58844375084311196"/>
+
+
+<Intersection name="AA" x="900.69292207779585624" y="488.75820625007457920"/>
+<Intersection name="BB" x="882.26925974052358015" y="489.47740625049488017"/>
+<Intersection name="CC" x="772.04251948017110863" y="494.47809375064775850"/>
+<Intersection name="DD" x="661.78075324704252580" y="499.69229375090037593"/>
+<Intersection name="EE" x="552.89667532428086361" y="505.65940624957187310"/>
+
+<Intersection name="AAA" x="873.55946753215664558" y="423.97401875071466293"/>
+<Intersection name="BBB" x="763.84644155854425662" y="429.59838750057070911"/>
+<Intersection name="CCC" x="653.91158441516756739" y="434.63278750031906839"/>
+<Intersection name="DDD" x="544.58384415536590950" y="439.60538125054279135"/>
+
+<Intersection name="EEEE" x="881.75554545461307043" y="355.87476875014095867"/>
+<Intersection name="DDDD" x="864.17250649300331133" y="356.90299999978122969"/>
+<Intersection name="CCCC" x="754.84476623403122630" y="362.76897499966622718"/>
+<Intersection name="BBBB" x="646.01906493532828790" y="367.62357500050717363"/>
+<Intersection name="AAAA" x="535.15018181779510087" y="373.37717500067583387"/>
+
+
+<Intersection name="R7" x="626.59132467502899999" y="230.55416874996112142"/>
+<Intersection name="R6" x="628.37764935048926418" y="243.03341250008051588"/>
+<Intersection name="R5" x="637.05241558442094174" y="303.98561250017024804"/>
+<Intersection name="R4" x="680.67142857097826436" y="633.36797500011175543"/>
+<Intersection name="R3" x="690.25687012944285925" y="699.77598125048302791"/>
+<Intersection name="R2" x="698.56970129835769967" y="759.17740625001590615"/>
+<Intersection name="R1" x="699.91236363594850900" y="768.73490000112258258"/>
+
+
+<Intersection name="B1" x="601.37262337612037300" y="844.81839375038623530"/>
+<Intersection name="B2" x="591.21509090934546293" y="774.68515625079476195"/>
+<Intersection name="B3" x="589.65059740281992617" y="764.76806250027641454"/>
+<Intersection name="B4" x="580.74232467514173095" y="705.07446250052294090"/>
+<Intersection name="B5" x="572.65132467516173165" y="639.31823124978393480"/>
+<Intersection name="B6" x="526.37033766221668429" y="308.89640000086939153"/>
+<Intersection name="B7" x="519.63367532463917087" y="254.75412500051760389"/>
+
+<Intersection name="G1" x="819.43266233778990681" y="833.85059374996501447"/>
+<Intersection name="G2" x="809.71879220805499244" y="762.41942500077527711"/>
+<Intersection name="G3" x="808.58628571458712031" y="752.52480625051953211"/>
+<Intersection name="G4" x="800.57701298663027956" y="694.42693125025141399"/>
+<Intersection name="G5" x="791.54031168851145139" y="628.01892499988002783"/>
+<Intersection name="G6" x="745.17759740271378632" y="298.40057499957612208"/>
+
+
+
+<Intersection name="a" x ="490" y="498"/>
+<Intersection name="b" x ="530" y="500"/>
+<Intersection name="c" x ="531" y="510"/>
+
+
+</Intersections>
+
+  <Roads>
+
+       <Road start="A"  end="B" name="AB" pvd="1" dvp="1"/>
+        <Road start="B"  end="C" name="BC" pvd="1" dvp="1"/>
+        <Road start="C"  end="D" name="CD" pvd="1" dvp="1"/>
+        <Road start="D"  end="E" name="DE" pvd="1" dvp="1"/>
+        <Road start="E"  end="F" name="EF" pvd="1" dvp="1"/>
+        <Road start="F"  end="G" name="FG" pvd="1" dvp="1"/>
+        <Road start="G"  end="H" name="GH" pvd="1" dvp="1"/>
+        <Road start="H"  end="I" name="HI" pvd="1" dvp="1"/>
+        <Road start="I"  end="J" name="IJ" pvd="1" dvp="1"/>
+        <Road start="J"  end="K" name="JK" pvd="1" dvp="1"/>
+
+        <Road start="K"  end="L" name="KL" pvd="1" dvp="1"/>
+        <Road start="L"  end="M" name="LM" pvd="1" dvp="1"/>
+        <Road start="M"  end="N" name="MN" pvd="1" dvp="1"/>
+        <Road start="N"  end="O" name="NO" pvd="1" dvp="1"/>
+        <Road start="O"  end="P" name="OP" pvd="1" dvp="1"/>
+        <Road start="P"  end="Q" name="PQ" pvd="1" dvp="1"/>
+
+        <Road start="Q"  end="X" name="QX" pvd="1" dvp="1"/>
+        <Road start="X"  end="Y" name="XY" pvd="1" dvp="1"/>
+        <Road start="Y"  end="Z" name="YZ" pvd="1" dvp="1"/>
+
+
+        <Road start="Q"  end="R" name="" pvd="1" dvp="1"/>
+        <Road start="R"  end="S" name="" pvd="1" dvp="1"/>
+        <Road start="S"  end="T" name="" pvd="1" dvp="1"/>
+        <Road start="T"  end="U" name="" pvd="1" dvp="1"/>
+        <Road start="U"  end="V" name="" pvd="1" dvp="1"/>
+        <Road start="V"  end="W" name="" pvd="1" dvp="1"/>
+
+        <Road start="P"  end="EE" name="PEE" pvd="1" dvp="1"/>
+        <Road start="EE"  end="DD" name="EEDD" pvd="1" dvp="1"/>
+        <Road start="DD"  end="CC" name="DDCC" pvd="1" dvp="1"/>
+        <Road start="CC"  end="BB" name="CCBB" pvd="1" dvp="1"/>
+        <Road start="BB"  end="AA" name="BBAA" pvd="1" dvp="1"/>
+
+
+        <Road start="O"  end="DDD" name="ODDD" pvd="1" dvp="1"/>
+        <Road start="DDD"  end="CCC" name="DDDCCC" pvd="1" dvp="1"/>
+        <Road start="CCC"  end="BBB" name="CCCBBB" pvd="1" dvp="1"/>
+        <Road start="BBB"  end="AAA" name="BBBAAA" pvd="1" dvp="1"/>
+
+
+        <Road start="AAAA"  end="N" name="AAAAN" pvd="1" dvp="1"/>
+        <Road start="BBBB"  end="AAAA" name="BBBBAAAA" pvd="1" dvp="1"/>
+        <Road start="CCCC"  end="BBBB" name="CCCCBBBB" pvd="1" dvp="1"/>
+        <Road start="DDDD"  end="CCCC" name="DDDDCCCC" pvd="1" dvp="1"/>
+        <Road start="EEEE"  end="DDDD" name="EEEEDDDD" pvd="1" dvp="1"/>
+
+
+
+
+        <Road start="R1"  end="R2" name="R1R2" pvd="1" dvp="1"/>
+        <Road start="R2"  end="R3" name="R2R3" pvd="1" dvp="1"/>
+        <Road start="R3"  end="R4" name="R3R4" pvd="1" dvp="1"/>
+        <Road start="R4"  end="Y" name="R4Y" pvd="1" dvp="1"/>
+        <Road start="Y"  end="DD" name="YDD" pvd="1" dvp="1"/>
+        <Road start="DD"  end="CCC" name="DDCCC" pvd="1" dvp="1"/>
+        <Road start="CCC"  end="BBBB" name="CCCBBBB" pvd="1" dvp="1"/>
+        <Road start="BBBB"  end="R5" name="BBBBR5" pvd="1" dvp="1"/>
+        <Road start="R5"  end="R6" name="R5R6" pvd="1" dvp="1"/>
+        <Road start="R6"  end="R7" name="R6R7" pvd="1" dvp="1"/>
+
+
+        <Road start="B1"  end="B2" name="B1B2" pvd="1" dvp="1"/>
+        <Road start="B2"  end="B3" name="B2B3" pvd="1" dvp="1"/>
+        <Road start="B3"  end="B4" name="B3B4" pvd="1" dvp="1"/>
+        <Road start="B4"  end="B5" name="B4B5" pvd="1" dvp="1"/>
+        <Road start="B5"  end="X" name="B5X" pvd="1" dvp="1"/>
+        <Road start="X"  end="EE" name="XEE" pvd="1" dvp="1"/>
+        <Road start="EE"  end="DDD" name="EEDDD" pvd="1" dvp="1"/>
+        <Road start="DDD"  end="AAAA" name="DDDAAAA" pvd="1" dvp="1"/>
+        <Road start="AAAA"  end="B6" name="AAAAB6" pvd="1" dvp="1"/>
+        <Road start="B6"  end="B7" name="B6B7" pvd="1" dvp="1"/>
+
+
+        <Road start="G1"  end="G2" name="G1G2" pvd="1" dvp="1"/>
+        <Road start="G2"  end="G3" name="G2G3" pvd="1" dvp="1"/>
+        <Road start="G3"  end="G4" name="G3G4" pvd="1" dvp="1"/>
+        <Road start="G4"  end="G5" name="G4G5" pvd="1" dvp="1"/>
+        <Road start="G5"  end="Z" name="G5Z" pvd="1" dvp="1"/>
+        <Road start="Z"  end="CC" name="ZCC" pvd="1" dvp="1"/>
+        <Road start="CC"  end="BBB" name="CCBBB" pvd="1" dvp="1"/>
+        <Road start="BBB"  end="CCCC" name="BBBCCCC" pvd="1" dvp="1"/>
+        <Road start="CCCC"  end="G6" name="CCCCG6" pvd="1" dvp="1"/>
+
+
+        <Road start="M"  end="B6" name="MB6" pvd="1" dvp="1"/>
+        <Road start="B6"  end="R5" name="B6R5" pvd="1" dvp="1"/>
+        <Road start="R5"  end="G6" name="R5G6" pvd="1" dvp="1"/>
+
+
+        <Road start="G5"  end="R4" name="G5R4" pvd="1" dvp="1"/>
+        <Road start="R4"  end="B5" name="R4B5" pvd="1" dvp="1"/>
+        <Road start="B5"  end="R" name="B5R" pvd="1" dvp="1"/>
+
+
+        <Road start="R3"  end="G4" name="R3G4" pvd="1" dvp="1"/>
+        <Road start="B4"  end="R3" name="B4R3" pvd="1" dvp="1"/>
+        <Road start="S"  end="B4" name="SB4" pvd="1" dvp="1"/>
+
+
+        <Road start="T"  end="B3" name="TB3" pvd="1" dvp="1"/>
+        <Road start="B3"  end="R2" name="B3R2" pvd="1" dvp="1"/>
+        <Road start="R2"  end="G3" name="R2G3" pvd="1" dvp="1"/>
+
+
+
+        <Road start="G2"  end="R1" name="G2R1" pvd="1" dvp="1"/>
+        <Road start="R1"  end="B2" name="R1B2" pvd="1" dvp="1"/>
+        <Road start="B2"  end="U" name="B2U" pvd="1" dvp="1"/>
+
+
+
+
+        <Road start="c"  end="b" name="cb" pvd="1" dvp="1"/>
+        <Road start="b"  end="a" name="ba" pvd="1" dvp="1"/>
+        <Road start="a"  end="c" name="ac" pvd="1" dvp="1"/>
+
+
+  </Roads>
+  </Topology>
+
+
+  <Light>
+    <Intersection>X</Intersection>
+    <State name="StraightEW">
+                                    <GreenDuration>10</GreenDuration>
+                                    <OrangeDuration>3</OrangeDuration>
+                                     <RedDuration>1</RedDuration>
+      <Connection>B5X,0,XEE,0</Connection>
+      <Connection>XEE,0,B5X,0</Connection>
+    </State>
+    <State name="StraightNS">
+                                    <GreenDuration>10</GreenDuration>
+                                    <OrangeDuration>3</OrangeDuration>
+                                    <RedDuration>1</RedDuration>
+      <Connection>QX,0,XEE,0</Connection>
+      <Connection>QX,0,XY,0</Connection>
+      <Connection>XY,0,QX,0</Connection>
+    </State>
+  </Light>
+
+
+  <Light>
+    <Intersection>B4</Intersection>
+    <State name="StraightEW">
+                                <GreenDuration>4</GreenDuration>
+                                <OrangeDuration>2</OrangeDuration>
+                                <RedDuration>1</RedDuration>
+      <Connection>B4B5,0,B3B4,0</Connection>
+      <Connection>B3B4,0,B4B5,0</Connection>
+    </State>
+    <State name="StraightNS">
+                                <GreenDuration>4</GreenDuration>
+                                <OrangeDuration>2</OrangeDuration>
+                               <RedDuration>1</RedDuration>
+      <Connection>SB4,0,B3B4,0</Connection>
+      <Connection>SB4,0,B4R3,0</Connection>
+      <Connection>B4R3,0,SB4,0</Connection>
+    </State>
+  </Light>
+
+
+
+
+</Map>

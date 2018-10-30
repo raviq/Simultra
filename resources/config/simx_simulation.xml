@@ -1,0 +1,37 @@
+<Simulation>
+
+<!-- vehicles in cluster 1, start from the bottom of the map -->
+
+  <Vehicle type="Tiny1">
+    <Location>450 440</Location>
+    <Direction>0</Direction>
+    <Driver type="Slow1"> <Lane>
+      <Intersections>O DDD CCC BBB AAA</Intersections>
+      </Lane>
+    </Driver>
+  </Vehicle>
+
+  <Vehicle type="Tiny2">
+  <Location>420 440</Location>
+  <Direction>0</Direction>
+    <Driver type="Slow1"> <Lane>
+      <Intersections>O DDD CCC BBB AAA</Intersections>
+    </Lane>
+    </Driver>
+  </Vehicle>
+
+<!--  cluster 2, one vehicle coming from the right side of the map   -->
+
+  <Vehicle type="Tiny3">
+  <Location>819 830</Location>
+  <Direction>-90</Direction>
+    <Driver type="Slow1"> <Lane>
+    <Intersections>G2 G3 G4 G5 Z CC BBB CCCC</Intersections>
+      </Lane>
+    </Driver>
+  </Vehicle>
+
+</Simulation>
+
+
+
