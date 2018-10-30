@@ -83,7 +83,9 @@ Simultra/
 └───utils/
         *.h *.c *.cpp            // Debug, log, geometrical calculations, etc.   
 │      
-└───MapGraphics/                 // Required to build libMapGraphics
+└───mapgraphics/                 // Required to build/link to libMapGraphics
+│      
+└───readosm/                     // Required to build/link to libreadosm
 ```
 
 To build MapGraphics and generate `libMapGraphics` run
