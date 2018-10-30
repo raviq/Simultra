@@ -4,9 +4,9 @@
   </a>
 </p>
 
-<h1 align="center">
+<h3 align="center">
   Simultra
-</h1>
+</h3>
 
 <p align="center">
 	A multiagent simulator of road traffic
@@ -16,7 +16,6 @@
 	<a href="https://www.gnu.org/licenses/gpl-3.0" alt="License: GPL v3"><img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg" /></a>
 	<!--<a href="https://travis-ci.org/raviq/Simultra" alt="Build Status"><img src="https://travis-ci.org/raviq/Simultra.svg?branch=master" /></a> -->
 </p>
-
 
 ## Table of Contents
 * [Description](#desc)
