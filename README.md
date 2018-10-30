@@ -1,14 +1,12 @@
-
-
 <p align="center">
   <a href="https://github.com/raviq/Simultra">
     <img alt="simultra" src="https://github.com/raviq/Simultra/blob/master/docs/ico.png" width="200">
   </a>
 </p>
 
-<h2 align="center">
+<h3 align="center">
   Simultra
-</h2>
+</h3>
 
 <p align="center">
 	A multiagent simulator of road traffic
