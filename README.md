@@ -42,6 +42,8 @@ Simultra is an open source, hybrid road traffic simulator designed to handle lar
 
 Watch this simulation [video](https://github.com/raviq/Simultra/blob/master/Simultra/resources/video.mp4) from AAMAS 2016. 
 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/6vsIEchAmt4/0.jpg)](https://www.youtube.com/watch?v=6vsIEchAmt4)
+
 ### Architecture
 
 <p align="center">
