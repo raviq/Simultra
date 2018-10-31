@@ -32,7 +32,7 @@
 <a  name="desc"></a>
 ## Description
 
-Simultra is a multiagent simulator of road traffic.
+Simultra is an open source, hybrid road traffic simulator designed to handle large roadmaps in real-time. It combines microscopic and mesoscopic simulations into one multiagent hybrid simulator. The large-scale maps are modelled mesoscopically in real-time, and the complex interactions benefit from detailed agent-based microscopic simulations. Combining an event-based mesoscopic model of the maps with a more detailed physical engine resolves the concurrency issues within the maps representation and the meso-micro transitions.
 
 ### Features
 
