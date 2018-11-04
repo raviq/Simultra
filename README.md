@@ -40,7 +40,7 @@ Simultra is an open-source, hybrid road traffic simulator designed to handle lar
 - Realistic map rendering using [OpenStreetMap](https://www.openstreetmap.org).
 - Precipitation rendering on top of the traffic simulation layer.
 
-Watch this simulation [video](https://www.youtube.com/watch?v=6vsIEchAmt4&feature=youtu.be) from AAMAS 2016:
+Watch this simulation [video](https://www.youtube.com/watch?v=6vsIEchAmt4&feature=youtu.be) from AAMAS 2016.
 
 ### Architecture
 
@@ -239,7 +239,7 @@ It is distributed WITHOUT WARRANTY; without even the implied warranty of merchan
 See the [GNU General Public License](https://github.com/raviq/Simultra/blob/master/LICENSE) for more details. 
 
 
-(c) 2015-2018 Rafik Hadfi, rafik.hadfi@gmail.com
+(c) 2016-2018 Rafik Hadfi, rafik.hadfi@gmail.com
 
 
 
