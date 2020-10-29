@@ -96,6 +96,13 @@ qmake MapGraphics.pro
 make
 ```
 
+To build readosm and generate `libreadosm` run 
+
+```sh
+cd readosm/
+make
+```
+
 To build simultra run
 
 ```sh
