@@ -9,7 +9,7 @@
 </h3>
 
 <p align="center">
-	A multiagent hybrid simulator of road traffic
+	A multiagent simulator of road traffic
 </p>
 
 <div align="center">
