@@ -13,11 +13,6 @@
 using namespace Utils;
 using namespace std;
 
-// detector: x1,y1 - x2,y2, QLine-like
-// add, or red from XML?
-// draw
-// >-------------<  or >-------------- or >
-
 Detector::Detector(QString name_, Plan::Road* road_, bool head_, qreal where_,  qreal proximity_)
 {
     name = name_;
