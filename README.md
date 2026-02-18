@@ -1,127 +1,122 @@
 <p align="center">
-  <a href="https://github.com/raviq/Simultra">
-    <img alt="simultra" src="https://github.com/raviq/Simultra/blob/master/docs/ico.png" width="200">
-  </a>
+  <img src="docs/ico.png" alt="Simultra" width="120"/>
 </p>
 
-<h3 align="center">
-  Simultra
-</h3>
+<h1 align="center">Simultra</h1>
 
 <p align="center">
-	A multiagent simulator of road traffic
+  <strong>A multiagent hybrid simulator for large-scale road traffic</strong><br/>
+  Built with Qt/C++ · Powered by OpenStreetMap
 </p>
 
-<div align="center">
+<p align="center">
+  <a href="https://travis-ci.org/raviq/Simultra"><img src="https://travis-ci.org/raviq/Simultra.svg?branch=master" alt="Build Status"/></a>
+  <a href="https://www.gnu.org/licenses/gpl-3.0"><img src="https://img.shields.io/badge/License-GPL%20v3-blue.svg" alt="License: GPL v3"/></a>
+  <img src="https://img.shields.io/github/stars/raviq/Simultra?style=social" alt="Stars"/>
+</p>
 
-[<img alt="Build Status" src="https://travis-ci.org/raviq/Simultra.svg?branch=master">][travis-url] 
-[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-</div>
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=6vsIEchAmt4&feature=youtu.be">🎬 Watch the demo (AAMAS 2016)</a>
+</p>
 
-## Table of Contents
-* [Description](#desc)
-* [Prerequisites](#prereq)
-* [Building](#build)
-* [Usage](#usge)
-* [Integration](#integ)
-* [Improvements](#improv)
-* [Contributions](#contrib)
-* [Citation](#cite)
-* [License](#licens)
+---
 
-<a  name="desc"></a>
-## Description
+## Overview
 
-Simultra is an open-source, hybrid road traffic simulator designed to handle large roadmaps in real-time. It combines microscopic and mesoscopic simulations into one multiagent hybrid simulator. The large-scale maps are modelled mesoscopically in real-time, and the complex traffic interactions benefit from detailed agent-based microscopic simulations. To resolve the concurrency issues within the maps representation and the meso-micro transitions, Simultra combines an event-based mesoscopic model of the maps with a more detailed physical engine.
+Simultra is an open-source road traffic simulator that seamlessly combines **microscopic** and **mesoscopic** simulation models into a single multiagent framework. It is designed to handle large real-world roadmaps in real-time:
 
-### Features
+- **Mesoscopic model** handles large-scale map regions efficiently using an event-based approach.
+- **Microscopic model** provides detailed, agent-based physical simulation for complex traffic interactions (intersections, lane changes, etc.).
+- A hybrid engine resolves concurrency issues and manages smooth transitions between the two scales.
 
-- Programmable agents that can emulate vehicles, drivers and intelligent traffic signals.
-- Realistic map rendering using [OpenStreetMap](https://www.openstreetmap.org).
-- Precipitation rendering on top of the traffic simulation layer.
+### Key Features
 
-Watch this simulation [video](https://www.youtube.com/watch?v=6vsIEchAmt4&feature=youtu.be) from AAMAS 2016.
+- 🚗 **Programmable agents** — emulate vehicles, drivers, and intelligent traffic signals with configurable behaviors.
+- 🗺️ **Real-world maps** — render and simulate on actual road networks via [OpenStreetMap](https://www.openstreetmap.org).
+- 🌧️ **Weather overlay** — layer precipitation radar data on top of the traffic simulation.
+- ⚡ **Real-time performance** — designed for large-scale maps without sacrificing interactivity.
 
 ### Architecture
 
 <p align="center">
-	<img src="https://github.com/raviq/Simultra/blob/master/docs/arch.png" width="600">
+  <img src="docs/arch.png" alt="Simultra Architecture" width="700"/>
 </p>
 
-<a  name="prereq"></a>
-## Prerequisites
+---
 
-- Qt 5.11.2
-- C++11
-- [Readosm](https://www.gaia-gis.it/gaia-sins/readosm-sources) (1.0.0e)
-- [MapGraphics](https://github.com/raptorswing/MapGraphics) 1.0
-	
-<a  name="build"></a>
-## Building
+## Getting Started
 
-Project structure
+### Prerequisites
 
-```
-Simultra/
-│   README.md                    // This file
-│   LICENSE.md                   // GNU GENERAL PUBLIC LICENCE (v3)
-│   simultra.pro                 // Required by qmake to build the project
-│   Makefile                     // Automatically generated makefile
-└───kore/                        // Core of the simulator
-|       *.h *.c *.cpp
-└───gui/                         // UI of roads, vehicles, traffic, etc.
-|   |   *.h *.cpp *.ui
-│   └───images/                  // Image manipulation routines
-|       *.h *.cpp
-└───build/
-|   |   simultra.app             // The simulator
-│   └───obj/
-|       *.o moc_* ui_* qrc_*
-└───resources/
-│   └───config/                  // Configurations and simulation scenarios
-│   └───RadarImages/             // Precipitation images
-└───utils/
-        *.h *.c *.cpp            // Debug, log, geometrical calculations, etc.   
-│      
-└───mapgraphics/                 // Required to build/link to libMapGraphics
-│      
-└───readosm/                     // Required to build/link to libreadosm
-```
+| Dependency | Version |
+|---|---|
+| **Qt** | 5.11.2+ |
+| **C++ standard** | C++11 |
+| [Readosm](https://www.gaia-gis.it/gaia-sins/readosm-sources) | 1.0.0e |
+| [MapGraphics](https://github.com/raptorswing/MapGraphics) | 1.0 |
 
-To build MapGraphics and generate `libMapGraphics` run
+### Build
 
-```sh
+**1. Build MapGraphics**
+
+```bash
 cd mapgraphics/
 qmake MapGraphics.pro
 make
 ```
 
-To build readosm and generate `libreadosm` run 
+**2. Build Readosm**
 
-```sh
+```bash
 cd readosm/
 make
 ```
 
-To build simultra run
+**3. Build Simultra**
 
-```sh
+```bash
 qmake simultra.pro
 make
 ```
-<a  name="usge"></a>
-## Usage
 
-To configure and run a simulation you need to work on a number of files in `config/`.
+The compiled binary will be at `build/simultra.app`.
 
-- Start by downloading the map of the area you are interested in from [osm.org](https://www.openstreetmap.org/export#map=18/35.17126/136.90116&layers=C) and name it `map.osm` .
-- Set the map topology in `simx_map.xml`.
-- Set the simulation scenario in `simx_simulation.xml` by specifying the vehicles and itineraries:
+---
 
-For each vehicle, we need to specify an XML entry:
-
+## Project Structure
 
 ```
+Simultra/
+├── kore/              # Core simulation engine
+├── gui/               # UI components (roads, vehicles, traffic layers)
+│   └── images/        # Image manipulation routines
+├── build/             # Compiled binary + object files
+├── resources/
+│   ├── config/        # Configuration files & simulation scenarios
+│   └── RadarImages/   # Precipitation overlay images
+├── utils/             # Debug, logging, geometry utilities
+├── mapgraphics/       # MapGraphics library source
+├── readosm/           # Readosm library source
+├── simultra.pro       # qmake project file
+└── Makefile
+```
+
+---
+
+## Usage
+
+### Setting Up a Simulation
+
+Configuration files live in `resources/config/`. Follow these steps:
+
+**1. Get your map**
+Download an area from [openstreetmap.org/export](https://www.openstreetmap.org/export) and save it as `map.osm`.
+
+**2. Define the road topology** in `simx_map.xml`.
+
+**3. Define the scenario** in `simx_simulation.xml`. Each vehicle is specified as:
+
+```xml
 <Vehicle type="TypeX">
   <Location>450 440</Location>
   <Direction>0</Direction>
@@ -133,125 +128,127 @@ For each vehicle, we need to specify an XML entry:
 </Vehicle>
 ```
 
-which contains the initial position of the vehicle, its orientation, driver type, and the intersections that define the itinerary of the driver.
+**4. Configure vehicle & driver types** in `types.xml`:
 
-
-- Set the types of the vehicles and the divers in `types.xml`.
-An example of vehicle type specifies the mass, wheelbase, force, and the look of the vehicle:
-```
+```xml
+<!-- Vehicle: mass, wheelbase, engine force, appearance -->
 <VehicleType name="TypeX">
   <Image>:/images/bluecar.png</Image>
   <Mass>1800.0</Mass>
   <Wheelbase>1</Wheelbase>
   <MotForce>5000</MotForce>
 </VehicleType>
-```
 
-The driver type specifies the velocities of two angles (straight and turn) which will later be used in the behavioural model. Example:
-```
+<!-- Driver: behavioral velocity parameters -->
 <DriverType name="SlowType">
   <TurnVelocity>2</TurnVelocity>
   <StraightVelocity>12</StraightVelocity>
 </DriverType>
 ```
 
-- Set the radar images in `RadarImages/` for the precipitation simulation. Current build comes with examples of `.gif` images from the [Japan Meteorological Agency](https://www.jma.go.jp/jma/indexe.html). 
+**5. Add weather data** (optional) — place radar `.gif` images in `RadarImages/`. Sample images from the [Japan Meteorological Agency](https://www.jma.go.jp/jma/indexe.html) are included.
 
-- It is important to set some of the parameters in `config.h`.
+**6. Review `config.h`** for global simulation parameters (map center, zoom defaults, etc.).
 
-Now, running the simulator should give something like:
+### Running the Simulator
 
-<p align="center">
-	<img src="https://github.com/raviq/Simultra/blob/master/docs/GUI1.png" width="900">
-</p>
-
-with
-
-|         |            |   
-| ------------- |-------------|
-|1. Play/Pause simulation. |11. Moving the map. |
-|2. Stop simulation. |12. Adding precipitations. |
-|3. Simulation clock. |13. About Simultra. |
-|4. Shows the OSM view of the simulation. | 14. Simulation area. |
-|5. Shows the physical view of the simulation. | 15. Order of the layers and rendering opacity. |
-|6. Zoom (OSM Map). | 16. Simulation components. |
-|7. Zoom (Physics engine Map). | 17. Vehicle's forces. Works in physical view. |
-|8. Increase/Decrease vehicle size. | 18. Flow parameters. |
-|9. Center the map in one particular point (specified in `config.h`). | 19. Traces, mobility data, etc. |
-|10. Pedestrian mode. | 20. Main view window. |
-
-
-### What you can do
-- Zoom in/out, either with the mouse or button 6.
-- Drag the map in different directions by clicking on button 11 and using the mouse.
-- Start the simulation using button 1.
-- Go through the mobility data in area 19.
-- Set zoom scale to 6 and press button 12 to see how precipitation clusters change on top of the map.
-- Press button 13 to shown some information about Simultra.
-- Alternate layers in area 15 using the up and down buttons.
-
-etc.
-
-<a  name="integ"></a>
-## Integration in other projects
-
-Simultra was used in other project either directly or after some changes on its design and code.
-
-- As a pipelined distributed architecture ([project](https://github.com/itolab-hayashi-rafik/Simultra))
+Launch the built binary. The GUI provides full interactive control:
 
 <p align="center">
-	<img src="https://github.com/raviq/Simultra/blob/master/docs/integ.png" width="700">
+  <img src="docs/GUI1.png" alt="Simultra GUI" width="700"/>
 </p>
 
-- On [StarBED](http://starbed.nict.go.jp/en/index.html)
+| # | Control | # | Control |
+|---|---|---|---|
+| 1 | Play / Pause | 11 | Pan the map |
+| 2 | Stop simulation | 12 | Toggle precipitation overlay |
+| 3 | Simulation clock | 13 | About Simultra |
+| 4 | OSM view | 14 | Simulation area |
+| 5 | Physics engine view | 15 | Layer order & opacity |
+| 6 | Zoom (OSM) | 16 | Simulation components |
+| 7 | Zoom (Physics) | 17 | Vehicle forces (physics view) |
+| 8 | Vehicle size +/− | 18 | Flow parameters |
+| 9 | Center map | 19 | Traces & mobility data |
+| 10 | Pedestrian mode | 20 | Main viewport |
+
+---
+
+## Integration
+
+Simultra has been adapted and deployed in other research projects:
+
+**Pipelined distributed architecture** — [itolab-hayashi-rafik/Simultra](https://github.com/itolab-hayashi-rafik/Simultra)
 
 <p align="center">
-	<img src="https://github.com/raviq/Simultra/blob/master/docs/onstarbed.png" width="500">
+  <img src="docs/integ.png" alt="Distributed integration" width="600"/>
 </p>
 
-<a  name="improv"></a>
-## Improvements
+**Large-scale testbed** — Deployed on [StarBED](http://starbed.nict.go.jp/en/index.html) (NICT)
 
-- There are currently too many configuration files. They can be either generated automatically in a pre-simulation phase or integrated in one JSON file (`config.h` too). Another way to avoid the heavy configuration is to randomly assign vehicles to the existing (OSM) paths. The assignments could be parametrised using some vehicle-per-lane distribution. Another option is to drag and drop vehicles on the OSM map.
-- Integrate traffic lights with OSM maps.
-- The precipitation data could in principle be acquired dynamically using some weather API.
-- Improvements on the (lat, lon) from/to (x, y) conversions.
-- Combining `readosm` and `json.c`.
-- More testing..
+<p align="center">
+  <img src="docs/onstarbed.png" alt="StarBED deployment" width="600"/>
+</p>
 
-<a  name="contrib"></a>
-## Contribution
+---
 
-Comments, feedback and ideas are welcome.
-If you find this project to be of any use, please let me know.
-If you find bugs or omissions in the code or documentation, please do not hesitate to submit an issue or open a pull request with a fix. Thank you.
+## Roadmap & Ideas
 
-<a  name="cite"></a>
+- [ ] Consolidate configuration files into a single JSON or auto-generate them in a pre-simulation phase.
+- [ ] Support drag-and-drop vehicle placement on the OSM map.
+- [ ] Integrate traffic light data from OSM.
+- [ ] Fetch precipitation data dynamically via a weather API.
+- [ ] Improve coordinate conversion between (lat, lon) and (x, y).
+- [ ] Merge `readosm` and `json.c` utilities.
+- [ ] Expand test coverage.
+
+---
+
 ## Citation
 
-> Takayuki Ito, Takanobu Otsuka, Teruyoshi Imaeda, and Rafik Hadfi. "An Implementation of Large-Scale Holonic Multi-agent Society Simulator and Agent Behavior Model." Pacific Rim International Conference on Artificial Intelligence. Springer, Cham, 2018.
+If you use Simultra in your research, please cite one of the following:
 
-> Rafik Hadfi, Masayuki Hayashi, and Takayuki Ito. "A pipeline multiagent architecture for road traffic simulation." Proceedings of ITS World Congress. 2017.
+```bibtex
+@inproceedings{hadfi2016multilayered,
+  title     = {Multilayered Multiagent System for Traffic Simulation},
+  author    = {Hadfi, Rafik and Ito, Takayuki},
+  booktitle = {Proceedings of the International Conference on Autonomous Agents \& Multiagent Systems (AAMAS)},
+  year      = {2016}
+}
 
-> Rafik Hadfi and Takayuki Ito. "Multilayered Multiagent System for Traffic Simulation." Proceedings of the 2016 International Conference on Autonomous Agents & Multiagent Systems. International Foundation for Autonomous Agents and Multiagent Systems, 2016.
+@inproceedings{hadfi2017pipeline,
+  title     = {A Pipeline Multiagent Architecture for Road Traffic Simulation},
+  author    = {Hadfi, Rafik and Hayashi, Masayuki and Ito, Takayuki},
+  booktitle = {Proceedings of ITS World Congress},
+  year      = {2017}
+}
 
-> Rafik Hadfi and Takayuki Ito. "Holonic multiagent simulation of complex adaptive systems." International Conference on Practical Applications of Agents and Multi-Agent Systems. Springer, Cham, 2016.
+@inproceedings{ito2018holonic,
+  title     = {An Implementation of Large-Scale Holonic Multi-agent Society Simulator and Agent Behavior Model},
+  author    = {Ito, Takayuki and Otsuka, Takanobu and Imaeda, Teruyoshi and Hadfi, Rafik},
+  booktitle = {Pacific Rim International Conference on Artificial Intelligence (PRICAI)},
+  publisher = {Springer},
+  year      = {2018}
+}
 
-<a  name="licens"></a>
+@inproceedings{hadfi2016holonic,
+  title     = {Holonic Multiagent Simulation of Complex Adaptive Systems},
+  author    = {Hadfi, Rafik and Ito, Takayuki},
+  booktitle = {International Conference on Practical Applications of Agents and Multi-Agent Systems (PAAMS)},
+  publisher = {Springer},
+  year      = {2016}
+}
+```
+
+---
+
+## Contributing
+
+Contributions, bug reports, and ideas are welcome! Feel free to [open an issue](https://github.com/raviq/Simultra/issues) or submit a pull request.
+
+---
+
 ## License
 
-This software was developed in the hope that it would be of some use to the AI community, 
-and is freely available for redistribution and/or modification under the terms of the GNU General Public Licence.
-It is distributed WITHOUT WARRANTY; without even the implied warranty of merchantability or fitness for a particular purpose.
-See the [GNU General Public License](https://github.com/raviq/Simultra/blob/master/LICENSE) for more details. 
+Distributed under the **GNU General Public License v3.0**. See [`LICENSE`](LICENSE) for details.
 
-
-(c) 2016-2018 Rafik Hadfi, rafik.hadfi@gmail.com
-
-
-
-[travis-url]: https://travis-ci.org/raviq/Simultra
-
-
-
-
+© 2016–2018 [Rafik Hadfi](mailto:rafik.hadfi@gmail.com)
