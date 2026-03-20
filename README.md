@@ -1,5 +1,6 @@
 <p align="center">
-  <img src="docs/banner.svg" alt="Simultra" width="120"/>
+ <!--  <img src="docs/banner.svg" alt="Simultra" width="120"/> -->
+ <img src="https://raw.githubusercontent.com/raviq/Simultra/master/docs/banner.svg" alt="Simultra" width="100%"/>
 </p>
 
 <h1 align="center">Simultra</h1>
