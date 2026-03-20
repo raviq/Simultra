@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/ico.png" alt="Simultra" width="120"/>
+  <img src="docs/banner.svg" alt="Simultra" width="120"/>
 </p>
 
 <h1 align="center">Simultra</h1>
